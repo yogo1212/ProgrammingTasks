@@ -30,8 +30,7 @@ def floor_string(tower, width, floor):
     if rem % 2 == 1:
         buf = '▗' + buf[1:] + "▖"
 
-    cushion = " " * int(rem / 2)
-    return cushion + buf + cushion
+    return buf.center(width)
 
 def display(towers, max_width = None):
     '''Show the current state of the towers on STDOUT'''
